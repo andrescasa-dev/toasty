@@ -1,0 +1,32 @@
+{
+  "name": "toasty",
+  "version": "1.0.0",
+  "description": "A customizable, accessible, and easy to use Toast component",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andrescasa-dev/Toasty.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "toast",
+    "accessibility",
+    "component",
+    "tailwind"
+  ],
+  "author": "Andres Castellanos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrescasa-dev/Toasty/issues"
+  },
+  "homepage": "https://github.com/andrescasa-dev/Toasty#readme",
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "rollup": "^4.20.0"
+  }
+}
