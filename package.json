@@ -26,7 +26,12 @@
   },
   "homepage": "https://github.com/andrescasa-dev/Toasty#readme",
   "devDependencies": {
-    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "rollup": "^4.20.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }

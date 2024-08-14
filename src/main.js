@@ -1,6 +1,7 @@
-import foo from './foo.js';
-import {version} from '../package.json'
+import React from 'react';
 
-export default function () {
-	console.log(`the version is: ${version}`);
-}
+const MyComponent = () => {
+  return <div>Hello, Rollup with React!</div>;
+};
+
+export default MyComponent;
