@@ -2,10 +2,9 @@
   "name": "toasty",
   "version": "1.0.0",
   "description": "A customizable, accessible, and easy to use Toast component",
-  "main": "index.js",
-  "scripts": {
-    "build": "rollup -c",
-    "test": "test"
+  "main": "src/copy-components.js",
+  "bin":{
+    "toasty":"./src/copy-components.js"
   },
   "repository": {
     "type": "git",
@@ -25,13 +24,17 @@
     "url": "https://github.com/andrescasa-dev/Toasty/issues"
   },
   "homepage": "https://github.com/andrescasa-dev/Toasty#readme",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "rollup": "^4.20.0"
-  },
   "dependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
-  }
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "files": [
+    "src/"
+  ]
 }
