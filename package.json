@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "A customizable, accessible, and easy to use Toast component",
   "main": "src/copy-components.js",
-  "bin":{
-    "toasty":"./src/copy-components.js"
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node ./src/setup-tailwind.ts"
+  },
+  "bin": {
+    "toasty": "./src/copy-components.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +32,8 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "ts-node": "^10.9.2"
   },
   "peerDependencies": {
     "react": "^18.3.1",
@@ -36,5 +41,9 @@
   },
   "files": [
     "src/"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^22.3.0",
+    "typescript": "^5.5.4"
+  }
 }
