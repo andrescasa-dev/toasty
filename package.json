@@ -9,7 +9,8 @@
     "dev": "ts-node ./src/cli/setup-tailwind.ts"
   },
   "bin": {
-    "toasty": "./src/cli/copy-toasty.js"
+    "toasty": "./src/cli/copy-toasty.js",
+    "setup-tailwind": "./dist/setup-tailwind.js"
   },
   "repository": {
     "type": "git",
