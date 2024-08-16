@@ -1,14 +1,15 @@
 {
+  "type": "module",
   "name": "toasty",
   "version": "1.0.0",
   "description": "A customizable, accessible, and easy to use Toast component",
-  "main": "src/copy-components.js",
+  "main": "./src/cli/copy-toasty.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node ./src/setup-tailwind.ts"
+    "dev": "ts-node ./src/cli/setup-tailwind.ts"
   },
   "bin": {
-    "toasty": "./src/copy-components.js"
+    "toasty": "./src/cli/copy-toasty.js"
   },
   "repository": {
     "type": "git",
