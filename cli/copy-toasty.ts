@@ -7,7 +7,10 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const srcPath = path.resolve(__dirname, "..", "components", "main.tsx");
+const srcPath = path.resolve(
+  __dirname,
+  "../../visual-testing/src/components/main.tsx",
+);
 const destPath = path.resolve(process.cwd(), "src/components/TestToasty.tsx");
 
 // Crear la carpeta src/components si no existe

@@ -1,15 +1,15 @@
 {
+  "name": "toasty-cli",
   "type": "module",
-  "name": "toasty",
   "version": "1.0.0",
   "description": "A customizable, accessible, and easy to use Toast component",
-  "main": "./src/cli/copy-toasty.js",
+  "main": "copy-toasty.js",
   "scripts": {
     "build": "tsc",
     "dev": "ts-node ./src/cli/setup-tailwind.ts"
   },
   "bin": {
-    "toasty": "./src/cli/copy-toasty.js",
+    "init-toasty": "./dist/copy-toasty.js",
     "setup-tailwind": "./dist/setup-tailwind.js"
   },
   "repository": {
@@ -27,15 +27,25 @@
   "author": "andres.about@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andrescasa-dev/Toasty/issues"
+    "url": "https://github.com/andrescasa-dev/toasty/issues"
   },
-  "homepage": "https://github.com/andrescasa-dev/Toasty#readme",
+  "homepage": "https://github.com/andrescasa-dev/toasty#readme",
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  },
   "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
-  "workspaces":[
-    "cli",
-    "visual-testing"
-  ]
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.3.0",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "3.3.3",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.1.0"
+  }
 }
