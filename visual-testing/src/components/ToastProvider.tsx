@@ -2,7 +2,7 @@
 import { PersonalizedToastConfig, ToastDataWithID } from "@/components/Toast";
 import ToastStack from "@/components/ToastStack";
 import { ToastStackConfig } from "@/types";
-import { createContext, ReactNode, useMemo, useState } from "react";
+import { createContext, ReactNode, useState } from "react";
 
 interface ToastContextValue {
   cleanToastStack: () => void;
@@ -23,22 +23,7 @@ interface ToastProviderProps extends ToastStackConfig {
   children: ReactNode;
 }
 
-function ToastProvider({
-  children,
-  closeDelay,
-  isAutoClose,
-  isClickToClose,
-  position,
-}: ToastProviderProps) {
-  const userConfig = useMemo(
-    () => ({
-      closeDelay,
-      isAutoClose,
-      isClickToClose,
-      position,
-    }),
-    [closeDelay, isAutoClose, isClickToClose, position],
-  );
+function ToastProvider({ children, ...userConfig }: ToastProviderProps) {
   const [toastList, setToastList] = useState<ToastDataWithID[]>([]);
   const [stackConfig, setStackConfig] = useState<ToastStackConfig>({
     ...defaultConfig,

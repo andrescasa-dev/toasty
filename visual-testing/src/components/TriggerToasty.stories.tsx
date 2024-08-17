@@ -1,7 +1,8 @@
-import useToast from "@/hook/useToast";
+import useToast from "@/hooks/useToast";
 import { ToastStackConfig } from "@/types";
 import { Meta, StoryObj } from "@storybook/react";
 import ToastProvider from "./ToastProvider";
+import { useCallback, useEffect } from "react";
 
 const meta: Meta<typeof TriggerToasty> = {
   title: "TriggerToasty",
@@ -34,10 +35,19 @@ function TriggerToasty(config: ToastStackConfig) {
 
 function Button() {
   const { pushToast } = useToast();
+  const handlePush = useCallback(
+    () => pushToast({ intent: "info", message: "hola mundo" }),
+    [],
+  );
+
+  useEffect(() => {
+    handlePush();
+  }, []);
+
   return (
     <button
       className="border p-4 border-border rounded-200"
-      onClick={() => pushToast({ intent: "info", message: "hola mundo" })}
+      onClick={handlePush}
     >
       TriggerToasty
     </button>
