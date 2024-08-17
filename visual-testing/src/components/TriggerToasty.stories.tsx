@@ -1,7 +1,7 @@
+import useToast from "@/hook/useToast";
 import { ToastStackConfig } from "@/types";
 import { Meta, StoryObj } from "@storybook/react";
-import { useContext } from "react";
-import ToastProvider, { ToastContext } from "./ToastProvider";
+import ToastProvider from "./ToastProvider";
 
 const meta: Meta<typeof TriggerToasty> = {
   title: "TriggerToasty",
@@ -33,10 +33,7 @@ function TriggerToasty(config: ToastStackConfig) {
 }
 
 function Button() {
-  const context = useContext(ToastContext);
-  if (!context)
-    return <div>This component should be wrapped by ToastProvider</div>;
-  const { pushToast } = context;
+  const { pushToast } = useToast();
   return (
     <button
       className="border p-4 border-border rounded-200"
