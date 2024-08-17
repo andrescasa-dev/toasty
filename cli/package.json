@@ -9,7 +9,7 @@
     "dev": "ts-node ./src/cli/setup-tailwind.ts"
   },
   "bin": {
-    "init-toasty": "./dist/copy-toasty.js",
+    "copy-toasty": "./dist/copy-components.js",
     "setup-tailwind": "./dist/setup-tailwind.js"
   },
   "repository": {
