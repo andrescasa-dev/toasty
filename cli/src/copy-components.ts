@@ -5,7 +5,6 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const srcDirectory = "../assets/";
 
 type CopyStatement = {
   src: string;
@@ -13,16 +12,19 @@ type CopyStatement = {
   options?: { include: string; exclude: string };
 };
 
-const createDir = ({ src, dest, options }: CopyStatement) => {
+const createDir = (
+  originPath: string,
+  { src, dest, options }: CopyStatement,
+) => {
   return options
     ? {
-        src: path.resolve(__dirname, srcDirectory, src),
+        src: path.resolve(__dirname, originPath, src),
         dest: path.resolve(process.cwd(), dest),
         filterCb: (file: string) =>
           file.endsWith(options.include) && !file.includes(options.exclude),
       }
     : {
-        src: path.resolve(__dirname, srcDirectory, src),
+        src: path.resolve(__dirname, originPath, src),
         dest: path.resolve(process.cwd(), dest),
       };
 };
@@ -51,9 +53,12 @@ function ensureOrCreate(dest: string) {
   fs.mkdirSync(dest, { recursive: true });
 }
 
-export default function copyAllFiles(copyStatement: CopyStatement[]) {
+export default function copyAllFiles(
+  originPath: string,
+  copyStatement: CopyStatement[],
+) {
   copyStatement.forEach(({ src: partialSrc, dest: partialDest, options }) => {
-    const { src, dest, filterCb } = createDir({
+    const { src, dest, filterCb } = createDir(originPath, {
       src: partialSrc,
       dest: partialDest,
       options,

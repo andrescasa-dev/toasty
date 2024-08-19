@@ -1,17 +1,18 @@
 {
-  "name": "toasty-cli",
+  "name": "toasty-casa",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A customizable, accessible, and easy to use Toast component",
-  "main": "copy-toasty.js",
+  "main": "dist/bundle.js",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "ts-node ./src/cli/setup-tailwind.ts"
+    "build": "rollup -c"
   },
-  "files": ["dist/", "assets/"],
+  "files": [
+    "dist/",
+    "assets/"
+  ],
   "bin": {
-    "toasty": "./dist/bundle.js",
-    "toasty-copy": "./dist/copy-components.js"
+    "toasty": "dist/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,8 @@
   },
   "homepage": "https://github.com/andrescasa-dev/toasty#readme",
   "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "lucide-react": "^0.428.0",
     "ts-node": "^10.9.2"
   },
   "peerDependencies": {
@@ -50,6 +53,7 @@
     "prettier": "3.3.3",
     "rollup": "^4.21.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.1.0"

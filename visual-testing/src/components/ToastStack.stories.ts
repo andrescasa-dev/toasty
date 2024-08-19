@@ -1,5 +1,5 @@
+import ToastStack from "@/components/ToastStack";
 import { Meta, StoryObj } from "@storybook/react";
-import ToastStack from "./ToastStack";
 
 const meta: Meta<typeof ToastStack> = {
   title: "ToastStack",
