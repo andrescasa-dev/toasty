@@ -45,7 +45,7 @@ const config: Config = {
 export default config;
 `;
 
-async function writeToFile() {
+export default async function updateTailwindFile() {
   const filePath = "./tailwind.config.ts";
 
   try {
@@ -55,5 +55,3 @@ async function writeToFile() {
     console.error("Error overwriting tailwind config:", error);
   }
 }
-
-writeToFile();

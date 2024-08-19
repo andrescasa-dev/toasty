@@ -5,12 +5,12 @@
   "description": "A customizable, accessible, and easy to use Toast component",
   "main": "copy-toasty.js",
   "scripts": {
-    "build": "tsc",
+    "build": "rollup -c",
     "dev": "ts-node ./src/cli/setup-tailwind.ts"
   },
   "bin": {
-    "copy-toasty": "./dist/copy-components.js",
-    "setup-tailwind": "./dist/setup-tailwind.js"
+    "toasty": "./dist/bundle.js",
+    "toasty-copy": "./dist/copy-components.js"
   },
   "repository": {
     "type": "git",
@@ -39,12 +39,17 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.3.0",
     "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "prettier": "3.3.3",
+    "rollup": "^4.21.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.1.0"
   }
