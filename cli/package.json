@@ -8,6 +8,7 @@
     "build": "rollup -c",
     "dev": "ts-node ./src/cli/setup-tailwind.ts"
   },
+  "files": ["dist/", "assets/"],
   "bin": {
     "toasty": "./dist/bundle.js",
     "toasty-copy": "./dist/copy-components.js"
