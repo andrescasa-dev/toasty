@@ -1,26 +1,36 @@
-# Quick start With Next.js
-This quick start use Next.js for practical purposes but the package works as long you have React, TS and Tailwind configured
+# Quick Start with Next.js
 
-## Create a Next.js project
-Follow the steps and ensure your project is set up with TypeScript and Tailwind
-```
+This guide uses Next.js for demonstration purposes, but the package works with any project configured with React, TypeScript, and Tailwind.
+
+## Create a Next.js Project
+
+Follow these steps to set up a Next.js project with TypeScript and Tailwind:
+
+```bash
 npx create-next-app@latest
 ```
 
 ## Install toasty-casa
-```
-npm i toasty-casa
+
+Add the `toasty-casa` package to your project:
+
+```bash
+npm install toasty-casa
 ```
 
 ## Initialize toasty-casa
-it would copy to your project the necessary components, with its correspondent types. Also, it will update your tailwind config
 
-```
+Run the following command to copy the necessary components and types into your project. This command will also update your Tailwind configuration:
+
+```bash
 npx toasty init
 ```
 
-## Place the provider
-Wrap your entire app using the `ToastProvider`. For example, In Next.js 
+## Add the Provider
+
+Wrap your entire application with the `ToastProvider`. For example, in a Next.js project, update the `src/app/layout.tsx` file to include the `ToastProvider` around the `children` prop:
+
+> Ensure to place the `ToastProvider` inside the `<body>` tag.
 
 ```html
 <html lang="en">
@@ -30,8 +40,10 @@ Wrap your entire app using the `ToastProvider`. For example, In Next.js
 </html>;
 ```
 
-## Use toasty
-Now, you can use the function pushToast provided by useToast hook.
+## Using Toasty
+
+You can now use the `pushToast` function provided by the `useToast` hook. Here’s an example:
+
 ```tsx
 "use client";
 import useToast from "@/hooks/useToast";
@@ -45,7 +57,7 @@ export default function Home() {
         className="bg-white text-black"
         onClick={() => pushToast({ message: "hello mundo" })}
       >
-        push toast
+        Push Toast
       </button>
     </main>
   );

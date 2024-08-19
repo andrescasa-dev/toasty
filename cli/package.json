@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/andrescasa-dev/toasty/issues"
   },
-  "homepage": "https://github.com/andrescasa-dev/toasty#readme",
+  "homepage": "https://github.com/andrescasa-dev/toasty/tree/main/cli#readme",
   "dependencies": {
     "class-variance-authority": "^0.7.0",
     "lucide-react": "^0.428.0",
