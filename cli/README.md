@@ -2,18 +2,16 @@
 A customizable and accessible Toast component. You can easily style it with Tailwind CSS, as components are copied directly into your project. CVA i used for a better customization experience.
 
 
-
 ## Table of Contents
-- [Quick Start](#quick-start)
+  - [Quick Start](#quick-start)
     - [Usage: Add Provider](#usage-add-provider)
     - [Usage: Push a toast](#usage-push-a-toast)
 - [Customization and Flexibility](#customization-and-flexibility)
 - [Component API](#component-api)
-
     
 ## Quick Start
 
-This guide uses Next.js for demonstration purposes, but the package works with any project configured with React, TypeScript, and Tailwind.
+This guide uses Next.js for demonstration purposes, but the package works in any project configured with React, TypeScript, and Tailwind.
 
 ### Create a Next.js Project
 
@@ -88,7 +86,7 @@ Configure global settings for all toasts in your application. These properties w
 
 |Prop|Default|Type|Description|
 |---|---|---|---|
-|`position`|`bottom-right`|`'top-left'|'top'|
+| `position` | `'bottom-right'` | `'top-left'` \| `'top'` \| `'top-right'` \| `'bottom-left'` \| `'bottom'` \| `'bottom-right'` | Position of the toast stack. |
 |`isClickToClose`|`true`|`boolean`|Default behavior for whether toasts can be closed by clicking.|
 |`isAutoClose`|`true`|`boolean`|Default behavior for whether toasts automatically close.|
 |`closeDelay`|`2000`|`number`|Default duration in milliseconds for auto-closing toasts.|
@@ -98,10 +96,9 @@ Configure global settings for all toasts in your application. These properties w
 | Prop             | Default        | Type                                              | Description                                                      |
 | ---------------- | -------------- | ------------------------------------------------- | ---------------------------------------------------------------- |
 | `message`        | `—`            | `string`                                          | The text message to display inside the toast.                    |
-| `handleClose`    | `—`            | `() => void`                                      | Function to call when the toast is closed.                       |
+| `intent`         | `notification` | `'notification'` \| `'warning'` \| `'info'` \| `'error'` | Each intent modify the color and the icon of the toast.   |
 | `isClickToClose` | `true`         | `boolean`                                         | Whether the toast can be closed by clicking on it.               |
 | `isAutoClose`    | `true`         | `boolean`                                         | Whether the toast should automatically close after `closeDelay`. |
 | `closeDelay`     | `2000`         | `number`                                          | Duration in milliseconds before the toast automatically closes.  |
-| `intent`         | `notification` | `'notification' \| 'warning' \| 'info' \| 'error' | Each intent modify the color and the icon of the toast.          |
 
 
