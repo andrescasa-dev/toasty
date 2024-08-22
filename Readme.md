@@ -104,4 +104,3 @@ Configure global settings for all toasts in your application. These properties w
 | `closeDelay`     | `2000`         | `number`                                          | Duration in milliseconds before the toast automatically closes.  |
 | `intent`         | `notification` | `'notification' \| 'warning' \| 'info' \| 'error' | Each intent modify the color and the icon of the toast.          |
 
-
