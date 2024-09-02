@@ -1,7 +1,7 @@
-import { GeneralToastConfig } from "../types/index";
 import { cva, VariantProps } from "class-variance-authority";
-import Toast, { ToastDataWithID } from "./Toast";
 import clsx from "clsx";
+import { GeneralToastConfig } from "../types/index";
+import Toast, { ToastDataWithID } from "./Toast";
 
 const toastStackStyles = cva("fixed z-[1000]", {
   variants: {
@@ -35,11 +35,14 @@ function ToastStack({
 }: ToastStackProps) {
   return (
     <div className={toastStackStyles({ position })}>
-      <div
+      <ul
         className={clsx("flex flex-col gap-1", {
           "items-end": position === "top-right" || position === "bottom-right",
           "items-center": position === "top" || position === "bottom",
         })}
+        role="region"
+        aria-live="polite"
+        aria-label="Notifications"
       >
         {stackToastData.map(({ id, ...userToast }) => (
           <Toast
@@ -51,7 +54,7 @@ function ToastStack({
             handleClose={() => closeToast(id)}
           />
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

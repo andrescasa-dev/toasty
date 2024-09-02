@@ -18,7 +18,7 @@ type Story = StoryObj<typeof TriggerToasty>;
 
 export const Notification: Story = {
   args: {
-    closeDelay: 2000,
+    closeDelay: 9000,
     isAutoClose: true,
     isClickToClose: true,
     position: "bottom-right",

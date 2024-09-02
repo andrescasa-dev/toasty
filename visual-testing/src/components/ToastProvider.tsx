@@ -2,7 +2,7 @@
 import { PersonalizedToastConfig, ToastDataWithID } from "@/components/Toast";
 import ToastStack from "@/components/ToastStack";
 import { ToastStackConfig } from "@/types";
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
 interface ToastContextValue {
   cleanToastStack: () => void;
@@ -54,6 +54,14 @@ function ToastProvider({ children, ...userConfig }: ToastProviderProps) {
     pushToast,
     setStackConfig,
   };
+
+  useEffect(() => {
+    const keyboardCloseAll = (e: KeyboardEvent) => {
+      if (e.key === "Escape") cleanToastStack();
+    };
+    window.addEventListener("keydown", keyboardCloseAll);
+    return () => window.removeEventListener("keydown", keyboardCloseAll);
+  }, []);
 
   return (
     <ToastContext.Provider value={value}>

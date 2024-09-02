@@ -69,13 +69,17 @@ function Toast({
       onClick={() => isClickToClose && handleClose && handleClose()}
     >
       {isClickToClose && (
-        <X className="absolute right-2 top-2 size-4 text-inherit opacity-50" />
+        <X
+          aria-label="close"
+          className="absolute right-2 top-2 size-4 text-inherit opacity-50"
+        />
       )}
-
+      <span className="sr-only">{intent}: </span>
       <div className="flex gap-1">
         {Icon && <Icon strokeWidth={1.5} />}
         <p className="text-sm md:text-base">{message}</p>
       </div>
+      <span className="sr-only">pres escape to close</span>
 
       {isAutoClose && <Timer duration={closeDelay!} intent={intent} />}
     </div>
