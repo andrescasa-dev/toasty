@@ -1,7 +1,7 @@
 {
   "name": "toasty-casa",
   "type": "module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A customizable, accessible, and easy to use Toast component",
   "main": "dist/bundle.js",
   "scripts": {
@@ -34,8 +34,7 @@
   "homepage": "https://github.com/andrescasa-dev/toasty/tree/main/cli#readme",
   "dependencies": {
     "class-variance-authority": "^0.7.0",
-    "lucide-react": "^0.428.0",
-    "ts-node": "^10.9.2"
+    "lucide-react": "^0.428.0"
   },
   "peerDependencies": {
     "react": "^18.3.1",

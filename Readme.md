@@ -66,7 +66,7 @@ export default function Home() {
       <h1>Test</h1>
       <button
         className="bg-white text-black"
-        onClick={() => pushToast({ message: "hello mundo" })}
+        onClick={() => pushToast({ message: "hello world" })}
       >
         Push Toast
       </button>
