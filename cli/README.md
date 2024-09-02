@@ -3,11 +3,21 @@ A customizable and accessible Toast component. You can easily style it with Tail
 
 
 ## Table of Contents
+- [Toasty](#toasty)
+  - [Table of Contents](#table-of-contents)
   - [Quick Start](#quick-start)
+    - [Create a Next.js Project](#create-a-nextjs-project)
+    - [Install toasty-casa](#install-toasty-casa)
+    - [Initialize toasty-casa](#initialize-toasty-casa)
     - [Usage: Add Provider](#usage-add-provider)
     - [Usage: Push a toast](#usage-push-a-toast)
 - [Customization and Flexibility](#customization-and-flexibility)
+- [Accessibility](#accessibility)
+  - [Keyboard Support](#keyboard-support)
+  - [Screen Reader Support](#screen-reader-support)
 - [Component API](#component-api)
+  - [ToastProvider (General Configuration)](#toastprovider-general-configuration)
+  - [Toast (Particular Config)](#toast-particular-config)
     
 ## Quick Start
 
@@ -66,7 +76,7 @@ export default function Home() {
       <h1>Test</h1>
       <button
         className="bg-white text-black"
-        onClick={() => pushToast({ message: "hello world" })}
+        onClick={() => pushToast({ message: "Hello world" })}
       >
         Push Toast
       </button>
@@ -78,6 +88,13 @@ export default function Home() {
 # Customization and Flexibility
 
 Our Toast package is designed for maximum flexibility. Because the components are copied directly into your project and not compiled, you can easily modify them as needed. Use Tailwind CSS to quickly adjust styles, and manage variants with CVA for clear and straightforward customization. This direct approach ensures you can tailor every aspect of the toasts to fit your design without hassle.
+
+# Accessibility
+## Keyboard Support
+All toast notifications can be closed by hitting the `Esc` key.
+
+## Screen Reader Support
+Toast notifications will be announced in a polite manner, along with their intent. This functionality was tested using NVDA screen reader on Windows.
 
 # Component API
 
@@ -100,5 +117,4 @@ Configure global settings for all toasts in your application. These properties w
 | `isClickToClose` | `true`         | `boolean`                                         | Whether the toast can be closed by clicking on it.               |
 | `isAutoClose`    | `true`         | `boolean`                                         | Whether the toast should automatically close after `closeDelay`. |
 | `closeDelay`     | `2000`         | `number`                                          | Duration in milliseconds before the toast automatically closes.  |
-
 
